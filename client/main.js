@@ -1,5 +1,3 @@
-// Meteor.subscribe('Postits', 'Zones', 'Boards');
-
 Router.route('/', function () {
   this.render('home')
 })

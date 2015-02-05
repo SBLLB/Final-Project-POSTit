@@ -11,10 +11,6 @@ describe('the board page', function() {
     expect($('img').attr('src')).toEqual("flickynotes_logo.png")
   });
 
-  xit('should have three columns', function(){
-    expect($('fieldset').size()).toEqual(3)
-  });
-
   it('should set the board window width', function(){
     var boardArr = Boards.find().fetch()
     var boardObject = _.last(boardArr)
@@ -26,7 +22,5 @@ describe('the board page', function() {
     var boardObject = _.last(boardArr)
     expect(boardObject.windowHeight).toEqual($(window).height())
   });
-
-
-
+  
 });

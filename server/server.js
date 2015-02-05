@@ -1,17 +1,4 @@
-// Meteor.publish('postits', function() {
-//   return Postits.find({});
-// });
-
-// Meteor.publish('zones', function() {
-//   return Zone.find({});
-// });
-
-// Meteor.publish('boards', function() {
-//   return Boards.find({});
-// });
-
 Meteor.startup(function () {
-  //Meteor.call('resetDemoBoard')
   Meteor.call('constructDemoBoard')
 });
 
@@ -20,7 +7,6 @@ Meteor.methods({
      Boards.remove({});
       Zones.remove({});
     Postits.remove({});
-    console.log("All collections have been set to zero")
   },
 
   removePostits: function(){

@@ -56,7 +56,6 @@ Tracker.autorun(function(){
 });
 
 function writeCoordinates(m){
-  // var board = _.first(Boards.getDemo())
   var halfWindowWidth = 680
   var halfWindowHeight = 400 
   pointer = Session.get('pointer')

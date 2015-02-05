@@ -22,11 +22,6 @@ var zoneId;
 		expect(hash.boardId).toEqual(board._id);
 	});
 
-	xit('should return all Zones for a board', function(){
-		collection = Zones.allZonesOfABoard(board._id);
-		expect(collection.length).toEqual(3);
-	});
-
 	afterEach(function(){
 		Zones.remove(zoneId);
 	});

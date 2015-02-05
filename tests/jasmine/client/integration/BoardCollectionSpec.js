@@ -31,8 +31,5 @@ describe ('Boards.addZone', function(){
     board = _.last(boards);
     Boards.addZone(board._id,"new Zone") 
   }) 
-  
-  xit("you can add a zone to the board", function(){
-    expect(board.zones.length).toEqual(1)
-  })
+
 })

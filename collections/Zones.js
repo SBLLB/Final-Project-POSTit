@@ -5,7 +5,7 @@ Zones.add = function(name, order, boardId){
 	var id = new Mongo.ObjectID()
 
   Zones.insert({
-    _id: id,
+	_id: id,
 		name: name,
 		order: order, 
 		boardId: boardId,

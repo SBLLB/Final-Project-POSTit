@@ -24,9 +24,4 @@ describe('Postit',function() {
 		expect(Postits.getByZone(zoneId2).length).toEqual(1);
 	});
 
-	xit('should be able to reset the collection', function(){
-		Meteor.call("removePostits");
-		expect(Postits.find().fetch().length).toEqual(0)
-	});
-
 });
