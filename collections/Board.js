@@ -20,6 +20,20 @@ Boards.addZone = function(id, newZoneTitle){
   _updateWidths(id)
 }
 
+Boards.constructDemoBoard = function(){
+  if(Boards.getDemo().length === 0){
+
+    var id = new Mongo.ObjectID()
+    var defaultZones = ["Todo","Doing","Done"]
+
+    Boards.insert({_id: id ,title: "Demo",zones: [],zoneWidth: 0})
+
+    _.each(defaultZones, function(newZone){
+      Boards.addZone(id, newZone)
+    })
+  }
+}
+
 function _updateWidths(id){
   var board = Boards.findOne(id)
   var mainWidth = 100-board.zones.length
@@ -32,3 +46,6 @@ function _getZonesArray(id){
   var board = _.first(Boards.find(id).fetch())
   return board.zones
 }
+
+
+
